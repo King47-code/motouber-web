@@ -1,0 +1,57 @@
+/* Menu.css */
+
+.menu-page {
+  background: #059669; /* green background */
+  min-height: 100vh;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.menu-list {
+  margin-top: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #000000;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background: #f3f4f6;
+}
+
+.menu-item svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+  color: #059669;
+}
+
+.menu-item span {
+  font-size: 1rem;
+  font-weight: 500;
+}
