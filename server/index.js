@@ -40,7 +40,10 @@ io.on('connection', (socket) => {
     console.log('Client disconnected:', socket.id);
   });
 });
-
+//Add this:
+app.get('/', (req, res) => {
+  res.send('MotoUber API is live 🚀. Try /api/register or /api/login');
+});
 // Start server (replace app.listen)
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
