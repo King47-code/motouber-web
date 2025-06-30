@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function Login({ setUser }) {
-  const [email, setEmail] = useState('');
+  const [email, setEmail]       = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
+  const [error, setError]       = useState('');
+  const navigate                = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,7 +55,13 @@ function Login({ setUser }) {
 
         <p className="footer">
           Don’t have an account?{' '}
-          <a onClick={() => navigate('/register')}>Sign up</a>
+          <button
+            onClick={() => navigate('/register')}
+            className="text-green-600 font-semibold hover:underline"
+            style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+          >
+            Sign up
+          </button>
         </p>
       </form>
     </div>

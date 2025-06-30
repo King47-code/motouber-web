@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 function Register() {
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail]     = useState('');
-  const [phone, setPhone]     = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError]     = useState('');
-  const navigate = useNavigate();
+  const [fullName, setFullName]       = useState('');
+  const [email, setEmail]             = useState('');
+  const [phone, setPhone]             = useState('');
+  const [password, setPassword]       = useState('');
+  const [error, setError]             = useState('');
+  const navigate                      = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ function Register() {
           email,
           phone,
           password,
-          role: 'rider', // fixed role for now
+          role: 'rider',
           profile_picture_url: '',
           id_card_url: ''
         }),
@@ -31,7 +31,6 @@ function Register() {
       if (!res.ok) {
         return setError(data.error || 'Registration failed');
       }
-      // on success, redirect to login
       navigate('/login');
     } catch {
       setError('Network error');
@@ -81,7 +80,13 @@ function Register() {
 
         <p className="footer">
           Already have an account?{' '}
-          <a onClick={() => navigate('/login')}>Sign in</a>
+          <button
+            onClick={() => navigate('/login')}
+            className="text-blue-500 underline"
+            style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+          >
+            Sign in
+          </button>
         </p>
       </form>
     </div>

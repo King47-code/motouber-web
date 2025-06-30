@@ -5,7 +5,6 @@ import {
   LoadScript,
   Autocomplete,
   Marker,
-  DirectionsService,
   DirectionsRenderer
 } from '@react-google-maps/api';
 
